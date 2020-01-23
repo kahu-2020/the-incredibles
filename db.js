@@ -16,8 +16,3 @@ function getChar(id, db = connection) {
   return db('characters').where('id', id).first()
 }
 
-
-
-
-
-

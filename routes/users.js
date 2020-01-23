@@ -16,6 +16,7 @@ router.get('/', (req, res) => {
     })
 })
 
+<<<<<<< HEAD
 // LINK ID WITH HYPERLINK ON HOMEPAGE
 router.get('/:id', (req, res) => {
   db.getChar()
@@ -25,4 +26,19 @@ router.get('/:id', (req, res) => {
 
 })
 
+=======
+router.get('/add', (req,res) => {
+  res.render('add')
+})
+
+// creating character add route to form 
+// router.post('/add', (req, res) => {
+//   db.addCharacter(req.body)
+//   .then(character => {
+//     res.redirect('/')
+//   })
+//   .catch.status(500).send('page not working' + err.message)
+// })
+
+>>>>>>> d7c2acb88cfc616358e8bf3ba3a3571a08725794
 module.exports = router
