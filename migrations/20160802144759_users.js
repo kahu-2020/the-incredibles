@@ -3,7 +3,9 @@ exports.up = (knex, Promise) => {
     table.increments('id').primary()
     table.string('name')
     table.string('director')
-    table.string('release_date')
+    table.string('image')
+    table.integer('release_year')
+
   })
 }
 

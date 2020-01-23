@@ -5,7 +5,7 @@ const db = require('../db')
 const router = express.Router()
 
 
-//
+//route to homepage
 router.get('/', (req, res) => {
   db.getMovies()
     .then(movies => {
@@ -16,6 +16,28 @@ router.get('/', (req, res) => {
     })
 })
 
+// LINK ID WITH HYPERLINK ON HOMEPAGE
+router.get('/characters/:id', (req, res) => {
+  db.getChar()
+    .then(chars => {
+      res.render('characters', { characters: chars })
+    })
+
+})
+
+router.get('/movie/:id', (req, res) => {
+  db.getCharByMovieId()
+    .then(chars => {
+      console.log(chars[0])
+      res.render('movie', { characters: chars })
+    })
+
+})
+
+router.get('/add', (req, res) => {
+  res.render('add')
+})
+
 // creating character add route to form 
 // router.post('/add', (req, res) => {
 //   db.addCharacter(req.body)
@@ -24,9 +46,6 @@ router.get('/', (req, res) => {
 //   })
 //   .catch.status(500).send('page not working' + err.message)
 // })
-router.get('/add', (req,res) => {
-  res.render('add')
-})
 
 // LINK ID WITH HYPERLINK ON HOMEPAGE
 router.get('/characters/:id', (req, res) => {

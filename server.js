@@ -5,6 +5,7 @@ const userRoutes = require('./routes/users')
 
 const server = express()
 
+
 // Middleware
 
 server.engine('hbs', hbs({ extname: 'hbs' }))
