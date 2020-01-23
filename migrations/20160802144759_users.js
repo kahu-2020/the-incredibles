@@ -5,7 +5,7 @@ exports.up = (knex, Promise) => {
     table.string('director')
     table.string('image')
     table.integer('release_year')
-    
+
   })
 }
 
