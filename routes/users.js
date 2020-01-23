@@ -14,14 +14,17 @@ router.get('/', (req, res) => {
     })
 })
 
+router.get('/add', (req,res) => {
+  res.render('add')
+})
 
 // creating character add route to form 
-router.get('/add', (req, res) => {
-  db.addCharacter()
-  .then(character => {
-    res.render('add', {character: character})
-  })
-  .catch.status(500).send('page not working' + err.message)
-})
+// router.post('/add', (req, res) => {
+//   db.addCharacter(req.body)
+//   .then(character => {
+//     res.redirect('/')
+//   })
+//   .catch.status(500).send('page not working' + err.message)
+// })
 
 module.exports = router
