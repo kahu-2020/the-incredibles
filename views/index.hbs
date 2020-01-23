@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Pixar Characters</title>
-  </head>
-  <body>
 
-    <img src=''>
-    <ul>
+<head>
+  <title>Pixar Characters</title>
+</head>
+
+<body>
+
+  <ul>
     {{#each movies}}
-      <li>{{name}}</li>
+    <h2>{{name}}</h2> <img class='image' src='{{image}}'>
     {{/each}}
-    </ul>
-  </body>
+  </ul>
+</body>
+
 </html>
