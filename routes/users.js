@@ -14,4 +14,14 @@ router.get('/', (req, res) => {
     })
 })
 
+
+// creating character add route to form 
+router.get('/add', (req, res) => {
+  db.addCharacter()
+  .then(character => {
+    res.render('add', {character: character})
+  })
+  .catch.status(500).send('page not working' + err.message)
+})
+
 module.exports = router
