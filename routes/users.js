@@ -17,10 +17,19 @@ router.get('/', (req, res) => {
 })
 
 // LINK ID WITH HYPERLINK ON HOMEPAGE
-router.get('/:id', (req, res) => {
+router.get('/characters/:id', (req, res) => {
   db.getChar()
     .then(chars => {
       res.render('characters', { characters: chars })
+    })
+
+})
+
+router.get('/movie/:id', (req, res) => {
+  db.getCharByMovieId()
+    .then(chars => {
+      console.log(chars[0])
+      res.render('movie', { characters: chars })
     })
 
 })
