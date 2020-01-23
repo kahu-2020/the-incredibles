@@ -14,4 +14,13 @@ router.get('/', (req, res) => {
     })
 })
 
+// router.get('/character/:id', (req, res) => {
+//   db.getChar()
+//     .then(characters => {
+
+//     })
+
+
+})
+
 module.exports = router
