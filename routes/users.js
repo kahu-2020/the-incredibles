@@ -47,4 +47,19 @@ router.get('/add', (req, res) => {
 //   .catch.status(500).send('page not working' + err.message)
 // })
 
+// LINK ID WITH HYPERLINK ON HOMEPAGE
+router.get('/characters/:id', (req, res) => {
+  db.getChar(req.params.id)
+  .then(chars => {
+    console.log(chars)
+      res.render('characters', {characters: chars})
+    })
+    .catch(err => {
+      res.status(500).send('DATABASE ERROR: ' + err.message)
+    })
+})
+
+
+
+
 module.exports = router

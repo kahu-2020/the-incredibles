@@ -14,10 +14,12 @@ function getMovies(db = connection) {
 
 
 function getChar(id, db = connection) {
-  return db('characters').where('id', id).first()
-}
+  return db('characters')
+  .where('characters.id', id)
+  .join('movies', 'movies.id', '=', 'characters.movie_id')
+  .select('*', 'characters.name AS characters_name')
 
 function getCharByMovieId(db = connection) {
   return db('movies')
     .join('characters', 'movies.id', 'characters.movie_id')
-}
+
