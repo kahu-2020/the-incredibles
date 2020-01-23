@@ -16,9 +16,6 @@ router.get('/', (req, res) => {
     })
 })
 
-<<<<<<< HEAD
-
-=======
 // LINK ID WITH HYPERLINK ON HOMEPAGE
 router.get('/:id', (req, res) => {
   db.getChar()
@@ -27,6 +24,5 @@ router.get('/:id', (req, res) => {
     })
 
 })
->>>>>>> 334d9de5e46484101c9485a0ee9763bb6824d74a
 
 module.exports = router
