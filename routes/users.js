@@ -16,21 +16,6 @@ router.get('/', (req, res) => {
     })
 })
 
-<<<<<<< HEAD
-// LINK ID WITH HYPERLINK ON HOMEPAGE
-router.get('/:id', (req, res) => {
-  db.getChar()
-    .then(chars => {
-      res.render('characters', {characters: chars})
-    })
-
-})
-
-=======
-router.get('/add', (req,res) => {
-  res.render('add')
-})
-
 // creating character add route to form 
 // router.post('/add', (req, res) => {
 //   db.addCharacter(req.body)
@@ -39,6 +24,23 @@ router.get('/add', (req,res) => {
 //   })
 //   .catch.status(500).send('page not working' + err.message)
 // })
+router.get('/add', (req,res) => {
+  res.render('add')
+})
 
->>>>>>> d7c2acb88cfc616358e8bf3ba3a3571a08725794
+// LINK ID WITH HYPERLINK ON HOMEPAGE
+router.get('/characters/:id', (req, res) => {
+  db.getChar(req.params.id)
+  .then(chars => {
+    console.log(chars)
+      res.render('characters', {characters: chars})
+    })
+    .catch(err => {
+      res.status(500).send('DATABASE ERROR: ' + err.message)
+    })
+})
+
+
+
+
 module.exports = router
