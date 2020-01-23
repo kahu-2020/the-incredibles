@@ -1,9 +1,17 @@
+<!DOCTYPE html>
+<html>
 
-  <body>
-    <ul>
-    {{#each users}}
-      <li>{{name}} ({{email}})</li>
+<head>
+  <title>Pixar Characters</title>
+</head>
+
+<body>
+
+  <ul>
+    {{#each movies}}
+    <h2>{{name}}</h2> <img class='image' src='{{image}}'>
     {{/each}}
-    </ul>
-  </body>
+  </ul>
+</body>
+
 </html>

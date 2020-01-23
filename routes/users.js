@@ -4,17 +4,28 @@ const db = require('../db')
 
 const router = express.Router()
 
+
+//route to homepage
 router.get('/', (req, res) => {
-  db.getUsers()
-    .then(users => {
-      res.render('index', {users: users})
+  db.getMovies()
+    .then(movies => {
+      res.render('index', { movies: movies })
     })
     .catch(err => {
       res.status(500).send('DATABASE ERROR: ' + err.message)
     })
 })
 
-router.get('/add', (req,res) => {
+// LINK ID WITH HYPERLINK ON HOMEPAGE
+router.get('/:id', (req, res) => {
+  db.getChar()
+    .then(chars => {
+      res.render('characters', { characters: chars })
+    })
+
+})
+
+router.get('/add', (req, res) => {
   res.render('add')
 })
 
