@@ -12,3 +12,4 @@ exports.up = (knex, Promise) => {
 exports.down = (knex, Promise) => {
   return knex.schema.dropTable('characters')
 }
+
