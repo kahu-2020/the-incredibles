@@ -4,9 +4,9 @@ exports.seed = knex =>
       knex('characters').insert([
         { id: 1, name: 'Crush', voice_actor: 'Andrew Stanton', quote: 'Oh, it\'s awesome, Jellyman. The little dudes are just eggs, we leave \'em on a beach to hatch, and then, coo-coo-cachoo, they find their way back to the big ol\' blue.', movie_id: 3 },
 
-        { id: 2 name: 'Boo', voice_actor: 'Mary Gibbs', quote: 'Mike Wazowski', movie_id: 2 },
+        { id: 2, name: 'Boo', voice_actor: 'Mary Gibbs', quote: 'Mike Wazowski', movie_id: 2 },
 
-        { id: 3 name: 'Rex', voice_actor: 'Wallace Shawn', quote: 'And I\'m from Mattel. Well, I\'m not really from Mattel, I\'m actually from a smaller company that was purchased by Mattel in a leveraged buyout.', movie_id: 1 },
+        { id: 3, name: 'Rex', voice_actor: 'Wallace Shawn', quote: 'And I\'m from Mattel. Well, I\'m not really from Mattel, I\'m actually from a smaller company that was purchased by Mattel in a leveraged buyout.', movie_id: 1 },
 
         { id: 4, name: 'Slinky Dog', voice_actor: 'Jim Varney', quote: 'Golly bob howdy!', movie_id: 1 },
 
