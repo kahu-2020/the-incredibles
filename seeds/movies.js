@@ -2,7 +2,7 @@ exports.seed = knex =>
   knex('movies').del()
     .then(() =>
       knex('movies').insert([
-        { id: 1, name: 'Toy Story', release_year: 1995, director: 'John Lasseter', image: 'https://is1-ssl.mzstatic.com/image/thumb/Video113/v4/e1/38/99/'  },
+        { id: 1, name: 'Toy Story', release_year: 1995, director: 'John Lasseter', image: 'https://api.time.com/wp-content/uploads/2015/11/8.jpg?w=600&quality=85'  },
         
         { id: 2, name: 'Monsters Inc.,', release_year: 2001, director: 'Pete Docter', image: 'https://lumiere-a.akamaihd.net/v1/images/image_3c4add40.jpeg?region=0,0,300,450' },
         
