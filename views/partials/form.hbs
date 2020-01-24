@@ -1,29 +1,39 @@
 
+  
   <form action="/add" method="POST">
 
+  <h2>Add your favoutite character to the correct movie!</h2>
+  <div class="form-row">
     <label for="name">Name: </label>
     <input type="text" name="name" placeholder="your character name ..">
+    </div>
 
+  <div class="form-row">
     <label for="actor">Actor: </label>
     <input type="text" name="voice_actor" placeholder="The actor...">
+    </div>
 
+  <div class="form-row">
     <label for="quote">Quote: </label>
     <input type="text" name="quote" placeholder="give us a character quote!..">
+    </div>
 
+  <div class="form-row">
     <label for="photo">Photo: </label>
     <input type="text" name="image" placeholder="Your favourite character photo!..">
+  </div>
 
-    
-<p>Which Movie is your Character in??!</p>
+    <div class="form-row">
+    <label>Which Movie is your Character in??!</label>
 
 
-  <select name="movie_id">
-    <option value="1">Toy Story</option>
-    <option value="2">Monsters Inc</option>
-    <option value="3">Finding Nemo</option>
-    
-  </select>
-  <br><br>
+    <select name="movie_id">
+      <option value="1">Toy Story</option>
+      <option value="2">Monsters Inc</option>
+      <option value="3">Finding Nemo</option>
+      
+    </select>
+  </div>
   
 
     <input type="submit">
