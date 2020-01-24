@@ -38,14 +38,15 @@ router.get('/add', (req, res) => {
   res.render('add')
 })
 
-// creating character add route to form 
-// router.post('/add', (req, res) => {
-//   db.addCharacter(req.body)
-//   .then(character => {
-//     res.redirect('/')
-//   })
-//   .catch.status(500).send('page not working' + err.message)
-// })
+
+//creating character add route to form 
+router.post('/add', (req, res) => {
+  db.addCharacter(req.body)
+  .then(() => {
+    res.redirect('/')
+  })
+  
+})
 
 // LINK ID WITH HYPERLINK ON HOMEPAGE
 router.get('/characters/:id', (req, res) => {

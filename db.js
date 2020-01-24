@@ -4,8 +4,13 @@ const connection = require('knex')(config)
 
 module.exports = {
   getMovies: getMovies,
+<<<<<<< HEAD
+  getChar: getChar, 
+  addCharacter: addCharacter,
+=======
   getChar: getChar,
   getCharByMovieId: getCharByMovieId
+>>>>>>> 358c9908edae82172a4ddce6a837680f2ed799eb
 }
 
 function getMovies(db = connection) {
@@ -23,3 +28,9 @@ function getCharByMovieId(db = connection) {
   return db('movies')
     .join('characters', 'movies.id', 'characters.movie_id')
 
+function addCharacter(body, db = connection){
+  console.log(body)
+  return db('characters')
+  .insert({name: body.name, voice_actor: body.voice_actor, quote: body.quote, movie_id: body.movie_id, image: body.image})
+
+}
