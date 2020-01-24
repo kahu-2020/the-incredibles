@@ -26,9 +26,8 @@ function getCharByMovieId(db = connection) {
     .join('characters', 'movies.id', 'characters.movie_id')
 }
 
-function addCharacter(body, db = connection){
+function addCharacter(body, db = connection) {
   console.log(body)
   return db('characters')
-  .insert({name: body.name, voice_actor: body.voice_actor, quote: body.quote, movie_id: body.movie_id, image: body.image})
-
+    .insert({ name: body.name, voice_actor: body.voice_actor, quote: body.quote, movie_id: body.movie_id, image: body.image })
 }
