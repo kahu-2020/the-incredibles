@@ -4,13 +4,10 @@ const connection = require('knex')(config)
 
 module.exports = {
   getMovies: getMovies,
-<<<<<<< HEAD
   getChar: getChar, 
   addCharacter: addCharacter,
-=======
-  getChar: getChar,
   getCharByMovieId: getCharByMovieId
->>>>>>> 358c9908edae82172a4ddce6a837680f2ed799eb
+
 }
 
 function getMovies(db = connection) {
