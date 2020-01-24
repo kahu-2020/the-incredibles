@@ -18,21 +18,13 @@ router.get('/', (req, res) => {
 
 // LINK ID WITH HYPERLINK ON HOMEPAGE
 router.get('/characters/:id', (req, res) => {
-  db.getChar()
+  db.getChar(req.params.id)
     .then(chars => {
+      // console.log(chars)
       res.render('characters', { characters: chars })
     })
-
 })
 
-router.get('/movie/:id', (req, res) => {
-  db.getCharByMovieId()
-    .then(chars => {
-      console.log(chars[0])
-      res.render('movie', { characters: chars })
-    })
-
-})
 
 router.get('/add', (req, res) => {
   res.render('add')
@@ -42,24 +34,13 @@ router.get('/add', (req, res) => {
 //creating character add route to form 
 router.post('/add', (req, res) => {
   db.addCharacter(req.body)
-  .then(() => {
-    res.redirect('/')
-  })
-  
+    .then(() => {
+      res.redirect('/')
+    })
+
 })
 
 // LINK ID WITH HYPERLINK ON HOMEPAGE
-router.get('/characters/:id', (req, res) => {
-  db.getChar(req.params.id)
-  .then(chars => {
-    console.log(chars)
-      res.render('characters', {characters: chars})
-    })
-    .catch(err => {
-      res.status(500).send('DATABASE ERROR: ' + err.message)
-    })
-})
-
 
 
 

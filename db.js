@@ -33,3 +33,5 @@ function addCharacter(body, db = connection) {
   return db('characters')
     .insert({ name: body.name, voice_actor: body.voice_actor, quote: body.quote, movie_id: body.movie_id, image: body.image })
 }
+
+
