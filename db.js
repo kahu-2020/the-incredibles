@@ -6,9 +6,7 @@ module.exports = {
   getMovies: getMovies,
   getChar: getChar,
   getCharByMovieId: getCharByMovieId,
-  addCharacter: addCharacter,
-  getCharByMovieId: getCharByMovieId
-
+  addCharacter: addCharacter
 }
 
 function getMovies(db = connection) {
@@ -18,9 +16,9 @@ function getMovies(db = connection) {
 
 function getChar(id, db = connection) {
   return db('characters')
-    .where('characters.id', id)
-    .join('movies', 'movies.id', '=', 'characters.movie_id')
-    .select('*', 'characters.name AS characters_name')
+  .where('characters.id', id)
+  .join('movies', 'movies.id', '=', 'characters.movie_id')
+  .select('*', 'characters.name AS characters_name')
 }
 
 function getCharByMovieId(db = connection) {
