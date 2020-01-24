@@ -18,6 +18,7 @@ router.get('/', (req, res) => {
 
 // LINK ID WITH HYPERLINK ON HOMEPAGE
 router.get('/characters/:id', (req, res) => {
+  console.log('hi')
   db.getChar(req.params.id)
     .then(chars => {
       // console.log(chars)

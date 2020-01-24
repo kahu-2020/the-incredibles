@@ -16,14 +16,14 @@ function getMovies(db = connection) {
 
 function getChar(id, db = connection) {
   return db('characters')
-  .where('characters.id', id)
-  .join('movies', 'movies.id', '=', 'characters.movie_id')
-  .select('*', 'characters.name AS characters_name')
+    .where('characters.id', id)
+    .join('movies', 'movies.id', '=', 'characters.movie_id')
+    .select('*', 'characters.name AS characters_name')
 }
 
 function getCharByMovieId(db = connection) {
   return db('movies')
-    .join('characters', 'movies.id', 'characters.movie_id')
+    .join('characters', 'movies.id', 'characters.movie_id', 'characters.image AS char_image')
 }
 
 function addCharacter(body, db = connection) {
