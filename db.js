@@ -4,8 +4,13 @@ const connection = require('knex')(config)
 
 module.exports = {
   getMovies: getMovies,
+<<<<<<< HEAD
   getChar: getChar, 
   addCharacter: addCharacter,
+=======
+  getChar: getChar,
+  getCharByMovieId: getCharByMovieId
+>>>>>>> 358c9908edae82172a4ddce6a837680f2ed799eb
 }
 
 function getMovies(db = connection) {
@@ -14,8 +19,14 @@ function getMovies(db = connection) {
 
 
 function getChar(id, db = connection) {
-  return db('characters').where('id', id).first()
-}
+  return db('characters')
+  .where('characters.id', id)
+  .join('movies', 'movies.id', '=', 'characters.movie_id')
+  .select('*', 'characters.name AS characters_name')
+
+function getCharByMovieId(db = connection) {
+  return db('movies')
+    .join('characters', 'movies.id', 'characters.movie_id')
 
 function addCharacter(body, db = connection){
   console.log(body)
