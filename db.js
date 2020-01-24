@@ -7,6 +7,8 @@ module.exports = {
   getChar: getChar,
   getCharByMovieId: getCharByMovieId,
   addCharacter: addCharacter,
+  getCharByMovieId: getCharByMovieId
+
 }
 
 function getMovies(db = connection) {
