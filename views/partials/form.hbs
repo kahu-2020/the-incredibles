@@ -1,19 +1,31 @@
 
-  <form action="/add/" method="POST">
+  <form action="/add" method="POST">
 
-    <label for="name">name</label>
+    <label for="name">Name: </label>
     <input type="text" name="name" placeholder="your character name ..">
 
-    <label for="actor">actor</label>
+    <label for="actor">Actor: </label>
     <input type="text" name="voice_actor" placeholder="The actor...">
 
-    <label for="quote">quote</label>
+    <label for="quote">Quote: </label>
     <input type="text" name="quote" placeholder="give us a character quote!..">
 
-    <label for="photo">photo</label>
+    <label for="photo">Photo: </label>
     <input type="text" name="image" placeholder="Your favourite character photo!..">
 
+    
+<p>Which Movie is your Character in??!</p>
 
-    <input type="submit" value="Submit">
+
+  <select name="movie_id">
+    <option value="1">Toy Story</option>
+    <option value="2">Monsters Inc</option>
+    <option value="3">Finding Nemo</option>
+    
+  </select>
+  <br><br>
+  
+
+    <input type="submit">
 
   </form>
