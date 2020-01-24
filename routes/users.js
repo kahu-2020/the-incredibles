@@ -18,11 +18,15 @@ router.get('/', (req, res) => {
 
 // LINK ID WITH HYPERLINK ON HOMEPAGE
 router.get('/characters/:id', (req, res) => {
-  console.log('hi')
   db.getChar(req.params.id)
     .then(chars => {
-      // console.log(chars)
-      res.render('characters', { characters: chars })
+      console.log()
+      let movieData ={
+        characters: chars,
+        title: chars[0].name
+      }
+
+      res.render('characters', movieData)
     })
 })
 

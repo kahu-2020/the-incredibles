@@ -12,7 +12,7 @@ exports.seed = knex =>
 
         { id: 5, name: 'Randall Boggs', voice_actor: 'Steve Buscemi', quote: 'I heard humans skin monsters and make toilet covers out of their fur', movie_id: 2, image: 'https://vignette.wikia.nocookie.net/the-secret-world-of-the-animated-characters/images/9/93/-1402676569.jpg/revision/latest?cb=20140613162249' },
 
-        { id: 6, name: 'Bruce (the Shark)', voice_actor: 'Barry Humphries', quote: 'I am a nice shark, not a mindless eating machine. If I am to change this image, I must first change myself. Fish are friends, not food.', movie_id: 3, image: 'vignette.wikia.nocookie.net/pixar/images/8/83/71423763-2085-4F98-8461-FC6E2C48828E.png/revision/latest?cb=20181210152244' },
+        { id: 6, name: 'Bruce (the Shark)', voice_actor: 'Barry Humphries', quote: 'I am a nice shark, not a mindless eating machine. If I am to change this image, I must first change myself. Fish are friends, not food.', movie_id: 3, image: 'https://i.insider.com/5829f8a6341d7ae3018b4846?width=1100&format=jpeg&auto=webp' },
 
         {
           id: 7, name: 'Mike Wazowski', voice_actor: 'Billy Crystal', quote: 'I am so romantic sometimes, I think I should just marry myself', movie_id: 2, image: 'https://vignette.wikia.nocookie.net/sulleycinematicuniverse/images/0/0b/Greenbillycrystalwithoneeye.jpeg/revision/latest?cb=20190614200344'
@@ -24,9 +24,9 @@ exports.seed = knex =>
 
         { id: 10, name: 'James P. Sullivan', voice_actor: 'John Goodman', quote: 'Give it a rest, will ya, butterball?', movie_id: 2, image: 'https://i.pinimg.com/236x/d0/9a/ae/d09aae957f1761bcea8a47eba818b006--disney-monsters-inc-monsters-inc-characters.jpg' },
 
-        { id: 11, name: 'Nemo', voice_actor: 'Alexander Gould', quote: '\"The water is half empty!\" \"Hmmmm. Really? I\'d say it\'s half full\"', movie_id: 3, image: 'https://when-the-cold-breeze-blows-away.fandom.com/wiki/Nemo?file=Nemo.png' },
+        { id: 11, name: 'Nemo', voice_actor: 'Alexander Gould', quote: '\"The water is half empty!\" \"Hmmmm. Really? I\'d say it\'s half full\"', movie_id: 3, image: 'https://vignette1.wikia.nocookie.net/disney/images/c/c6/Nemo_Promo_5.jpg/revision/latest?cb=20151229212619' },
 
-        { id: 12, name: 'Hamm', voice_actor: 'John Ratzenberger', quote: 'Hey, why did the toys cross the road', movie_id: 1, image: 'https://disney.fandom.com/wiki/Hamm' },
+        { id: 12, name: 'Hamm', voice_actor: 'John Ratzenberger', quote: 'Hey, why did the toys cross the road', movie_id: 1, image: 'https://lumiere-a.akamaihd.net/v1/images/open-uri20160811-32147-12n66d4_413f6635.jpeg?region=0%2C0%2C1024%2C320' },
       ]))
 
 

@@ -1,14 +1,16 @@
 <body>
+  <p>Movie name: {{title}}</p>
   <ul>
     {{#each characters}}
     {{!--CHARS NAME MISSING--}}
-    <p>Movie name: {{name}}</p>
-    <img src={{char_image}} alt="hhh">
+    <img class='charimg' src={{img}} alt="hhh">
     <p>Characters name: {{characters_name}}</p>
     <p>Voice actor: {{voice_actor}}</p>
     <p>Quote: {{quote}}</p>
     {{/each}}
   </ul>
+
+  <a href='/'>Home</a>
 </body>
 
 </html>
