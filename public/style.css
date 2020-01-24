@@ -5,12 +5,38 @@ body {
 
 header {
     font-family: 'Amatic SC', cursive;
-   
-    
-
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(170, 160, 160, 0.664);
 }
+
+header img {
+    max-width: 800px;
+}
+
+form {
+    text-align: center;
+    font-family: 'Bangers', cursive;
+    
+    
+}
+
 
 .charimg {
     text-align: centre;
     width: 200px;
+}
+.form-row {
+    margin-bottom: 10px;
+}
+
+.form-row label {
+    vertical-align: baseline;
+    margin-right: 5px;
+}
+
+.form-row input {
+    padding: 4px;
 }
